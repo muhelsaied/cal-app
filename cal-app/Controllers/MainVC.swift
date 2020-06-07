@@ -10,9 +10,12 @@ import UIKit
 
 class MainVC: UIViewController {
     
-    @IBOutlet weak var wageBtn: TxtField!
 
-    @IBOutlet weak var inputPrice: TxtField!
+    @IBOutlet weak var wageLbl: TxtField!
+    @IBOutlet weak var price: TxtField!
+    
+    @IBOutlet weak var wageHours: UILabel!
+    @IBOutlet weak var hoursLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +31,43 @@ class MainVC: UIViewController {
         calculateBtn.setTitle("Calculate", for: .normal)
         calculateBtn.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),for: .normal)
         calculateBtn.addTarget(self, action: #selector(MainVC.calculate), for:.touchUpInside)
-        wageBtn.inputAccessoryView = calculateBtn
-        inputPrice.inputAccessoryView = calculateBtn
+        wageLbl.inputAccessoryView = calculateBtn
+        price.inputAccessoryView = calculateBtn
+        //hide num of hours
+        //hide hours label
+        //hide clear btn
+        wageHours.isHidden = true
+        hoursLbl.isHidden = true
         
         }
     @objc func calculate() {
-        print("tooooooz")
-       
+       // check if hours lbs and price lbl is not empty
+        if let wageLbl = wageLbl.text ,let price = price.text{
+      //check if inputs are doubles
+            if let wage = Double(wageLbl) ,let price = Double(price){
+                //end view input
+                //show wagehours hours lbl
+                //calculate
+                view.endEditing(true)
+                wageHours.isHidden = false
+                hoursLbl.isHidden = false
+                wageHours.text = "\(Wage.hourToWork(forWage :wage,andPrice :price))"
+            } else {
+                print("price or wage is not doubles")
+            }
         
+            
+        }else{
+            print("input feilds")
+        }
+        
+    }
+    
+    @IBAction func clearBtnTapped(_ sender: Any) {
+        wageHours.isHidden = true
+        hoursLbl.isHidden = true
+        wageLbl.text = ""
+        price.text = ""
     }
 
 

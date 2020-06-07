@@ -26,44 +26,82 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-Wp-urD" customClass="TxtField" customModule="cal_app" customModuleProvider="target">
-                                <rect key="frame" x="20" y="214" width="374" height="40"/>
+                                <rect key="frame" x="20" y="214" width="374" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="udB-Bg-HaE"/>
+                                    <constraint firstAttribute="height" constant="60" id="udB-Bg-HaE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-ol-gia" customClass="TxtField" customModule="cal_app" customModuleProvider="target">
-                                <rect key="frame" x="20" y="279" width="374" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="QYL-U6-ZiS"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="299" width="374" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX6-EP-nj5">
+                                <rect key="frame" x="54.5" y="399" width="305" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qou-El-GTv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRD-1I-0AN">
+                                <rect key="frame" x="171.5" y="459" width="71" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuP-vx-COZ">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.80134509880738247" green="0.67157748900467584" blue="1" alpha="0.15696522887323944" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1jS-f1-3IB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jbA-vY-USP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="hRD-1I-0AN" firstAttribute="width" secondItem="LX6-EP-nj5" secondAttribute="width" multiplier="0.232787" id="3BR-cy-Jxn"/>
+                            <constraint firstItem="LX6-EP-nj5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kz-75-Q7F"/>
                             <constraint firstAttribute="bottom" secondItem="Aik-k2-0Ix" secondAttribute="bottom" id="Anf-rS-DmO"/>
+                            <constraint firstItem="hRD-1I-0AN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBN-Lu-SJg"/>
+                            <constraint firstItem="hRD-1I-0AN" firstAttribute="top" secondItem="LX6-EP-nj5" secondAttribute="bottom" constant="15" id="FHJ-Ef-pJu"/>
                             <constraint firstItem="Aik-k2-0Ix" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FQI-TW-H34"/>
                             <constraint firstItem="RA3-ol-gia" firstAttribute="height" secondItem="R2p-Wp-urD" secondAttribute="height" id="KNC-UU-vre"/>
                             <constraint firstItem="Aik-k2-0Ix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LiQ-Fq-KcS"/>
                             <constraint firstItem="Qnu-mn-Ymm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Shf-vI-h59"/>
                             <constraint firstItem="RA3-ol-gia" firstAttribute="top" secondItem="R2p-Wp-urD" secondAttribute="bottom" constant="25" id="VPO-IY-ram"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FuP-vx-COZ" secondAttribute="trailing" constant="20" id="ZnN-3f-YQj"/>
+                            <constraint firstItem="LX6-EP-nj5" firstAttribute="width" secondItem="RA3-ol-gia" secondAttribute="width" multiplier="0.815508" id="bRM-uK-qdS"/>
                             <constraint firstItem="RA3-ol-gia" firstAttribute="width" secondItem="R2p-Wp-urD" secondAttribute="width" id="cVK-Ng-rv9"/>
                             <constraint firstItem="RA3-ol-gia" firstAttribute="trailing" secondItem="R2p-Wp-urD" secondAttribute="trailing" id="etP-so-5OW"/>
                             <constraint firstItem="R2p-Wp-urD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fFS-21-aEt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FuP-vx-COZ" secondAttribute="bottom" constant="20" id="fod-uO-F6i"/>
                             <constraint firstItem="Qnu-mn-Ymm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzO-ia-AI6"/>
                             <constraint firstItem="Aik-k2-0Ix" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iyM-Wx-rtb"/>
                             <constraint firstItem="RA3-ol-gia" firstAttribute="leading" secondItem="R2p-Wp-urD" secondAttribute="leading" id="k6p-NV-fNT"/>
                             <constraint firstItem="R2p-Wp-urD" firstAttribute="top" secondItem="Qnu-mn-Ymm" secondAttribute="bottom" constant="35" id="lZ6-7X-LyA"/>
+                            <constraint firstItem="FuP-vx-COZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lpa-nB-ZYT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R2p-Wp-urD" secondAttribute="trailing" constant="20" id="qOg-oe-sAZ"/>
+                            <constraint firstItem="LX6-EP-nj5" firstAttribute="top" secondItem="RA3-ol-gia" secondAttribute="bottom" constant="40" id="tPI-W3-Nqb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="inputPrice" destination="RA3-ol-gia" id="D53-lF-7XO"/>
-                        <outlet property="wageBtn" destination="R2p-Wp-urD" id="dQs-xo-S3D"/>
+                        <outlet property="hoursLbl" destination="hRD-1I-0AN" id="rkq-Gf-cud"/>
+                        <outlet property="price" destination="RA3-ol-gia" id="00b-uz-5b8"/>
+                        <outlet property="wageHours" destination="LX6-EP-nj5" id="Vzs-qt-A1E"/>
+                        <outlet property="wageLbl" destination="R2p-Wp-urD" id="K2R-P0-vUz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
