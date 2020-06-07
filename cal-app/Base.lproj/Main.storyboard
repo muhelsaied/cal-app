@@ -1,24 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="cal_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="Aik-k2-0Ix">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-mn-Ymm">
+                                <rect key="frame" x="169.5" y="104" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Srl-Pe-lgM"/>
+                                    <constraint firstAttribute="height" constant="75" id="pcC-jI-Xb6"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2p-Wp-urD" customClass="TxtField" customModule="cal_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="214" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="udB-Bg-HaE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-ol-gia" customClass="TxtField" customModule="cal_app" customModuleProvider="target">
+                                <rect key="frame" x="20" y="279" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QYL-U6-ZiS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Aik-k2-0Ix" secondAttribute="bottom" id="Anf-rS-DmO"/>
+                            <constraint firstItem="Aik-k2-0Ix" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FQI-TW-H34"/>
+                            <constraint firstItem="RA3-ol-gia" firstAttribute="height" secondItem="R2p-Wp-urD" secondAttribute="height" id="KNC-UU-vre"/>
+                            <constraint firstItem="Aik-k2-0Ix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LiQ-Fq-KcS"/>
+                            <constraint firstItem="Qnu-mn-Ymm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Shf-vI-h59"/>
+                            <constraint firstItem="RA3-ol-gia" firstAttribute="top" secondItem="R2p-Wp-urD" secondAttribute="bottom" constant="25" id="VPO-IY-ram"/>
+                            <constraint firstItem="RA3-ol-gia" firstAttribute="width" secondItem="R2p-Wp-urD" secondAttribute="width" id="cVK-Ng-rv9"/>
+                            <constraint firstItem="RA3-ol-gia" firstAttribute="trailing" secondItem="R2p-Wp-urD" secondAttribute="trailing" id="etP-so-5OW"/>
+                            <constraint firstItem="R2p-Wp-urD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fFS-21-aEt"/>
+                            <constraint firstItem="Qnu-mn-Ymm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzO-ia-AI6"/>
+                            <constraint firstItem="Aik-k2-0Ix" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iyM-Wx-rtb"/>
+                            <constraint firstItem="RA3-ol-gia" firstAttribute="leading" secondItem="R2p-Wp-urD" secondAttribute="leading" id="k6p-NV-fNT"/>
+                            <constraint firstItem="R2p-Wp-urD" firstAttribute="top" secondItem="Qnu-mn-Ymm" secondAttribute="bottom" constant="35" id="lZ6-7X-LyA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R2p-Wp-urD" secondAttribute="trailing" constant="20" id="qOg-oe-sAZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputPrice" destination="RA3-ol-gia" id="D53-lF-7XO"/>
+                        <outlet property="wageBtn" destination="R2p-Wp-urD" id="dQs-xo-S3D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <image name="windowShopperIcon" width="115" height="115"/>
+    </resources>
 </document>
