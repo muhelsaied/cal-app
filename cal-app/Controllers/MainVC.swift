@@ -42,7 +42,10 @@ class MainVC: UIViewController {
         }
     @objc func calculate() {
        // check if hours lbs and price lbl is not empty
-        if let wageLbl = wageLbl.text ,let price = price.text{
+        if (wageLbl.text == "" && price.text == ""){
+            alert(title: "Field Required", message: "Fill in all fields ")
+        }
+        else if let wageLbl = wageLbl.text ,let price = price.text{
       //check if inputs are doubles
             if let wage = Double(wageLbl) ,let price = Double(price){
                 //end view input
@@ -53,12 +56,10 @@ class MainVC: UIViewController {
                 hoursLbl.isHidden = false
                 wageHours.text = "\(Wage.hourToWork(forWage :wage,andPrice :price))"
             } else {
-                print("price or wage is not doubles")
+                alert(title: "InValid Input ", message: "please input numbers only")
             }
         
             
-        }else{
-            print("input feilds")
         }
         
     }
@@ -68,6 +69,13 @@ class MainVC: UIViewController {
         hoursLbl.isHidden = true
         wageLbl.text = ""
         price.text = ""
+    }
+    
+    func alert(title :String,message :String){
+        let alert = UIAlertController(title:title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
     }
 
 
