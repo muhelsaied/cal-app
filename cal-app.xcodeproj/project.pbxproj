@@ -14,7 +14,20 @@
 		E16FCE0A248CB29F00FDEC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16FCE09248CB29F00FDEC38 /* Assets.xcassets */; };
 		E16FCE0D248CB29F00FDEC38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16FCE0B248CB29F00FDEC38 /* LaunchScreen.storyboard */; };
 		E16FCE18248CB55700FDEC38 /* TxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16FCE17248CB55700FDEC38 /* TxtField.swift */; };
+		E186252D248CECCF009798A8 /* cal_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E186252C248CECCF009798A8 /* cal_appTests.swift */; };
+		E1862535248CED1E009798A8 /* wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1862534248CED1E009798A8 /* wage.swift */; };
+		E1862536248D03F0009798A8 /* wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1862534248CED1E009798A8 /* wage.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E186252F248CECCF009798A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E16FCDF5248CB29F00FDEC38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E16FCDFC248CB29F00FDEC38;
+			remoteInfo = "cal-app";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E16FCDFD248CB29F00FDEC38 /* cal-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cal-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +39,21 @@
 		E16FCE0C248CB29F00FDEC38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E16FCE0E248CB29F00FDEC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E16FCE17248CB55700FDEC38 /* TxtField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxtField.swift; sourceTree = "<group>"; };
+		E186252A248CECCF009798A8 /* cal-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cal-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E186252C248CECCF009798A8 /* cal_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cal_appTests.swift; sourceTree = "<group>"; };
+		E186252E248CECCF009798A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1862534248CED1E009798A8 /* wage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E16FCDFA248CB29F00FDEC38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1862527248CECCF009798A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E16FCDFF248CB29F00FDEC38 /* cal-app */,
+				E186252B248CECCF009798A8 /* cal-appTests */,
 				E16FCDFE248CB29F00FDEC38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E16FCDFD248CB29F00FDEC38 /* cal-app.app */,
+				E186252A248CECCF009798A8 /* cal-appTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,8 +116,18 @@
 		E16FCE16248CB33500FDEC38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E1862534248CED1E009798A8 /* wage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E186252B248CECCF009798A8 /* cal-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				E186252C248CECCF009798A8 /* cal_appTests.swift */,
+				E186252E248CECCF009798A8 /* Info.plist */,
+			);
+			path = "cal-appTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +150,24 @@
 			productReference = E16FCDFD248CB29F00FDEC38 /* cal-app.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E1862529248CECCF009798A8 /* cal-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1862533248CECCF009798A8 /* Build configuration list for PBXNativeTarget "cal-appTests" */;
+			buildPhases = (
+				E1862526248CECCF009798A8 /* Sources */,
+				E1862527248CECCF009798A8 /* Frameworks */,
+				E1862528248CECCF009798A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1862530248CECCF009798A8 /* PBXTargetDependency */,
+			);
+			name = "cal-appTests";
+			productName = "cal-appTests";
+			productReference = E186252A248CECCF009798A8 /* cal-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +180,10 @@
 				TargetAttributes = {
 					E16FCDFC248CB29F00FDEC38 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					E1862529248CECCF009798A8 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = E16FCDFC248CB29F00FDEC38;
 					};
 				};
 			};
@@ -143,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				E16FCDFC248CB29F00FDEC38 /* cal-app */,
+				E1862529248CECCF009798A8 /* cal-appTests */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +217,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1862528248CECCF009798A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -169,10 +235,28 @@
 				E16FCE18248CB55700FDEC38 /* TxtField.swift in Sources */,
 				E16FCE01248CB29F00FDEC38 /* AppDelegate.swift in Sources */,
 				E16FCE03248CB29F00FDEC38 /* SceneDelegate.swift in Sources */,
+				E1862535248CED1E009798A8 /* wage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1862526248CECCF009798A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E186252D248CECCF009798A8 /* cal_appTests.swift in Sources */,
+				E1862536248D03F0009798A8 /* wage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1862530248CECCF009798A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E16FCDFC248CB29F00FDEC38 /* cal-app */;
+			targetProxy = E186252F248CECCF009798A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E16FCE06248CB29F00FDEC38 /* Main.storyboard */ = {
@@ -342,6 +426,44 @@
 			};
 			name = Release;
 		};
+		E1862531248CECCF009798A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "cal-appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Muhammed-Elsaied.cal-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cal-app.app/cal-app";
+			};
+			name = Debug;
+		};
+		E1862532248CECCF009798A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "cal-appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Muhammed-Elsaied.cal-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cal-app.app/cal-app";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +481,15 @@
 			buildConfigurations = (
 				E16FCE12248CB29F00FDEC38 /* Debug */,
 				E16FCE13248CB29F00FDEC38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1862533248CECCF009798A8 /* Build configuration list for PBXNativeTarget "cal-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1862531248CECCF009798A8 /* Debug */,
+				E1862532248CECCF009798A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
